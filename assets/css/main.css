@@ -1,0 +1,423 @@
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.download-btn {
+  position: relative;
+  overflow: hidden;
+  /* padding-right: 2.5rem; */
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.download-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background-color: #0d6efd;
+  transition: width 0.4s ease;
+}
+
+@media (max-width: 575.98px) {
+  .btns {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* nav bar logo size */
+.site-logo img {
+    width: 100%;
+    height: auto;
+    max-width: 7vw;
+    min-width: 100px;
+}
+/* service - box size equal */
+/* Make all columns the same height */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Make each column stretch to same height */
+.col-lg-4,
+.col-md-6 {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Make the feature box fill the full column height */
+.feature-1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  padding-bottom: 20px; /* Adjust if needed */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Optional: Add a subtle shadow */
+}
+/* for icon */
+.icon-wrapper i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  color: #fff; 
+} 
+
+/* Timeline container */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 8px; /* Align with the dot */
+  width: 4px;
+  height: 100%;
+  background-color: #dee2e6; /* light gray */
+}
+
+/* Each timeline step */
+.timeline-step {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+/* Timeline dot (colored circle) */
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: -30px; /* Adjust to align with the vertical line */
+  top: 6px;    /* Adjust to align with heading */
+  z-index: 1;
+}
+
+/* Optional: Make it pop with a shadow */
+.timeline-dot::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: inherit;
+  opacity: 0.15;
+  z-index: -1;
+}
+
+/* Responsive heading and paragraph styles (optional improvements) */
+.timeline-step h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.timeline-step p {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* faq section */
+.accordion-button {
+  font-weight: 600;
+  font-size: 1.05rem;
+  background-color: #f8f9fa;
+  color: #0d6efd;
+  transition: all 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #e7f1ff;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.accordion-body {
+  font-size: 0.95rem;
+  color: #495057;
+}
+
+/* ---------------------------------------------- */
+
+/* about .html */
+/* mission section */
+.mission-container {
+    background: linear-gradient(to right, #eef3ff, #ffffff);
+    padding: 60px 20px;
+    border-radius: 20px;
+  }
+
+  .mission-box {
+    background: rgba(255, 255, 255, 0.9);
+    border-left: 6px solid #0d6efd;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    position: relative;
+  }
+
+  .mission-box h2 {
+    font-weight: 700;
+    color: #0d6efd;
+  }
+
+  .mission-box p {
+    font-size: 1.15rem;
+    color: #444;
+    margin-top: 15px;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 767px) {
+    .mission-box {
+      padding: 30px 20px;
+    }
+
+    .mission-box p {
+      font-size: 1rem;
+    }
+  }
+
+/* why section */
+
+.why-choose-section {
+    background: linear-gradient(to right, #f0f4ff, #ffffff);
+    padding: 60px 20px;
+    border-radius: 20px;
+  }
+
+  .why-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 90%;
+  }
+
+  .why-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+  }
+
+  .why-icon {
+    font-size: 2rem;
+    color: #0d6efd;
+    margin-bottom: 15px;
+  }
+
+  .why-title {
+    font-weight: 600;
+    color: #2c3e50;
+  }
+
+  .btn-why {
+    background-color: #0d6efd;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .btn-why:hover {
+    background-color: #0b5ed7;
+  }
+
+/* why buisness owners chooseus section */
+
+.ft-why-choose {
+    background: linear-gradient(to right, #eef3ff, #ffffff);
+}
+
+.ft-why-choose h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.ft-why-choose p {
+  font-size: 1rem;
+  color: #6c757d;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Card improvements */
+.ft-why-choose .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.ft-why-choose .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.ft-why-choose .card-body {
+  padding: 1.5rem;
+}
+
+.ft-why-choose i {
+  color: #0d6efd;
+  min-width: 40px;
+  text-align: center;
+}
+
+.ft-why-choose h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 0.25rem;
+}
+
+.ft-why-choose .text-muted {
+  font-size: 0.9rem;
+}
+
+/* Responsive spacing */
+@media (max-width: 575.98px) {
+  .ft-why-choose h3 {
+    font-size: 1.5rem;
+  }
+
+  .ft-why-choose .card-body {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ft-why-choose i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+
+/* ------------------------------------------- */
+
+/* footer */
+
+/* Footer base */
+.footer-white {
+  background-color: #ffffff;
+  color: #000000;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Footer headings */
+.footer-white h6 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #000;
+}
+
+/* Footer links */
+.footer-white a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.2rem;
+  /* display: inline-block; */
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-white a:hover {
+  color: #0d6efd;
+  text-decoration: underline;
+  transform: translateX(3px);
+}
+
+/* Footer paragraph */
+.footer-white p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Social buttons */
+.social-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+/* Hover effect: icon scales up slightly */
+.social-btn i {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.social-btn:hover i {
+  transform: scale(1.2);
+}
+
+/* Footer copyright */
+.footer-white .copyright {
+  border-top: 1px solid #e0e0e0;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+/* Responsive tweaks: Mobile (≤ 767.98px) */
+@media (max-width: 767.98px) {
+  .footer-white {
+    text-align: center;
+  }
+
+  .footer-white .row > div {
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-white .d-flex {
+    justify-content: center !important;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+/* Responsive tweaks: Tablet (≤ 991.98px) */
+@media (max-width: 991.98px) {
+  .footer-white .row > div {
+    text-align: center;
+  }
+
+  .footer-white .d-flex {
+    justify-content: center !important;
+  }
+
+  .footer-white ul {
+    padding-left: 0;
+  }
+}
