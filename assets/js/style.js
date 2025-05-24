@@ -128,3 +128,9 @@ document.addEventListener("DOMContentLoaded", function () {
     zoomed = !zoomed;
   });
 });
+
+// function for floationg up arrow
+
+ document.getElementById("scrollToTopBtn").addEventListener("click", function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
