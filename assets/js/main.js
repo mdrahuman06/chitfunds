@@ -297,21 +297,29 @@ jQuery(document).ready(function($) {
 
 	// navigation
   var OnePageNavigation = function() {
-    var navToggler = $('.site-menu-toggle');
-   	$("body").on("click", ".main-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a", function(e) {
-      e.preventDefault();
+  var navToggler = $('.site-menu-toggle');
 
-      var hash = this.hash;
+  $("body").on("click", ".main-menu li a[href^='#'], .smoothscroll[href^='#']", function(e) {
+    e.preventDefault();
 
-      $('html, body').animate({
-        'scrollTop': $(hash).offset().top
-      }, 600, 'easeInOutCirc', function(){
-        window.location.hash = hash;
-      });
+    var hash = this.hash;
 
+    $('html, body').animate({
+      'scrollTop': $(hash).offset().top
+    }, 600, 'easeInOutCirc', function(){
+      window.location.hash = hash;
     });
-  };
-  OnePageNavigation();
+  });
+
+  // Properly handle mobile menu clicks for regular links
+  $("body").on("click", ".site-mobile-menu .site-nav-wrap li a", function(e) {
+    // Close mobile menu on click
+    $('body').removeClass('offcanvas-menu');
+    $('.js-menu-toggle').removeClass('active');
+  });
+};
+OnePageNavigation();
+
 
   var siteScroll = function() {
 
