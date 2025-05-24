@@ -410,7 +410,7 @@ h1, h2, h3, h4, h5,
       float: right;
       margin-top: 8px; }
       .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-close span {
-        font-size: 30px;
+        font-size: 25px;
         display: inline-block;
         padding-left: 10px;
         padding-right: 0px;
@@ -725,7 +725,7 @@ h1, h2, h3, h4, h5,
   background: #5577B4;
   position: relative;
   border-radius: 50%; }
-  .social-wrap a > span {
+  .social-wrap a > span >i{
     position: absolute;
     color: #fff;
     left: 50%;
